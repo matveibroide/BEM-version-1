@@ -8,7 +8,11 @@ body {
     font-family: 'TT Lakes Regular';
 }
 
+
+
+
 @media (min-width:0px) and (max-width:320px) {
+
 
     .main {
         height: 100vh;
@@ -40,26 +44,26 @@ body {
         margin-right: 20px;
     }
 
-    .main__search__menu__wrapper {
-        width: 320px;
+    .main__search-menu__wrapper {
+        display: flex;
         overflow-x: scroll;
+        width: 320px;
     }
 
     .main__search-menu {
-        border: 2px solid black;
-        width: 1096px;
         display: flex;
-        justify-content: space-around;
+        width: 1096px;
+        height: 40px;
         margin-bottom: 20px;
     }
 
     .main__search-menu__button {
-        width: fit-content;
+        width: 246px;
         padding: 8px;
         border-radius: 5px;
         border:none;
         background-color: transparent;
-        color:#80949F;
+        
     }
 
     .main__search-menu__button:hover {
@@ -70,6 +74,7 @@ body {
 
     .main__search-menu a {
         text-decoration: none;
+        color:#80949F;
     }
 
     .main__article__button {

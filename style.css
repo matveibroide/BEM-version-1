@@ -11,7 +11,6 @@ body {
     align-items: flex-start;    
 }
 
-
 /* common styles */
 
 .main__nav {
@@ -115,6 +114,7 @@ body {
         display: flex;
         overflow-x: scroll;
         width: 320px;
+        max-width: 320px;
     }
 
     .main__search-menu {
@@ -136,7 +136,6 @@ body {
     .main__search-menu__button:hover {
 
         border: 2px solid #B8FFEC;
-
     }
 
     .main__article {
@@ -225,10 +224,10 @@ body {
 
 /* big screen styles */
 
-@media(width >= 1120px) {
+@media (width > 768px)  {
 
     .main {
-        width:1120px;
+        width: 1120px;
     }
 
     .main__content-wrapper {

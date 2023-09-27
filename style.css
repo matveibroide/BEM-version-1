@@ -225,12 +225,13 @@ body {
 @media (width > 768px)  {
 
     .main {
-        width: 1120px;
-        height: 535px;
+        margin: 0 auto 0 auto;
+        width: 1120px; 
     }
 
     .main__content-wrapper {
         width: 100%;
+        height: 100vh;
     }
 
     .main__nav {

@@ -6,12 +6,52 @@
 body {
     margin: 0;
     font-family: 'TT Lakes Regular';
+    
 }
+
+
+/* common styles */
 
 .main__content-wrapper {
 
     background-color: #F8F8F8;
 }
+
+.main__search-menu {
+    display: flex;
+    width: 1096px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.main__search-menu__button {
+    width: 246px;
+    padding: 8px;
+    border-radius: 5px;
+    border:none;
+    background-color: transparent;
+    
+}
+
+.main__search-menu__button:hover {
+
+    border: 2px solid #B8FFEC;
+
+}
+.main__search-menu a {
+    text-decoration: none;
+    color:#80949F;
+}
+
+.main__article__button {
+
+    border: none;
+    background-color: transparent;
+    margin: 10px 0 20px 20px;
+}
+
+
+/* mobile styles */
 
 
 @media (width <= 320px) {
@@ -32,9 +72,24 @@ body {
         align-items: center;
     }
 
+    .main__nav__chat {
+        display: none;
+    }
+
+    .main__nav__chat {
+        display: none;
+    }
+
+    .main__nav__call {
+        display: none;
+    }
+    
+    .main__nav__bigscreen__divider {
+        display: none;
+    }
+
     .main .main__header {
-        display: flex;
-        
+        display: flex;  
     }
 
     .main__header__highlight {
@@ -79,6 +134,10 @@ body {
         color:#80949F;
     }
 
+    .main__bigscr__p {
+        display: none;
+    }
+
     .main__article__button {
 
         border: none;
@@ -93,11 +152,60 @@ body {
 
 }
 
+/* medium screen styles */
+
 @media  (width >= 768px) {
 
     .main {
         height: 100vh;
+        width: 768px;    
+    }
+
+    .main__content-wrapper {
+        
+        padding-top: 10px;
+    }
+
+    .main__nav {
         width: 768px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .main__nav__call {
+        margin-left: 25%;
+    }
+
+    .main__header {
+        display: flex;
+        align-items: center;
+        width: 30%;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        
+    }
+
+    .main__search-menu__wrapper {
+        width: 768px;
+        overflow-x: scroll;
+    }
+
+    .main__article {
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 720px;
+        height: 208px;
+        display: flex;
+        
+
+    }
+
+    .main__p__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: flex-start;
     }
 
 }

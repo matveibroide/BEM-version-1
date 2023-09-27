@@ -6,15 +6,25 @@
 body {
     margin: 0;
     font-family: 'TT Lakes Regular';
-    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;    
 }
 
 
 /* common styles */
 
-.main__content-wrapper {
+.main__nav {
+    background-color: #fff;
+}
 
+.main__content-wrapper {
+    padding: 0px;
     background-color: #F8F8F8;
+}
+
+.main__header h1 {
+    font-weight:900;
 }
 
 .main__search-menu {
@@ -70,6 +80,10 @@ body {
         display: flex;
         justify-content: space-around;
         align-items: center;
+    }
+
+    .main__nav__bigscr__p {
+        display: none;
     }
 
     .main__nav__chat {
@@ -154,22 +168,21 @@ body {
 
 /* medium screen styles */
 
-@media  (width >= 768px) {
+@media  (width <= 768px) and (width > 320px) {
 
     .main {
         height: 100vh;
         width: 768px;    
     }
 
-    .main__content-wrapper {
-        
-        padding-top: 10px;
-    }
-
     .main__nav {
         width: 768px;
         display: flex;
         justify-content: space-around;
+    }
+
+    .main__nav__bigscr__p {
+        display: none;
     }
 
     .main__nav__call {
@@ -206,6 +219,77 @@ body {
         flex-direction: column;
         justify-content: space-around;
         align-content: flex-start;
+    }
+
+}
+
+/* big screen styles */
+
+@media(width >= 1120px) {
+
+    .main {
+        width:1120px;
+    }
+
+    .main__content-wrapper {
+        width: 100%;
+    }
+
+    .main__nav {
+        display: flex;
+        background-color: transparent;
+        justify-content: space-around;
+        width: 40%;
+    }
+
+    .main__nav__bars {
+        display: none;
+    }
+
+    .main__nav__divider {
+        display: none;
+    }
+
+    .main__nav__bigscreen__divider {
+        display: none;
+    }
+
+    .main__nav__call {
+        display: none;
+    }
+
+    .main__nav__chat {
+        display: none;
+    }
+
+    .main__nav__profile {
+        display: none;
+    }
+
+    .main__nav__logo {
+        display: none;
+    }
+
+    .main__header {
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main__header h1 {
+        width: fit-content;
+    }
+
+    .main__nav__and__header__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .main__article {
+        display: flex;
+        
     }
 
 }

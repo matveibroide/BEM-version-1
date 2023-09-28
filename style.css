@@ -161,6 +161,10 @@ body {
         height: 176px;
     }
 
+    .main__p__wrapper {
+        margin-left: 5%;
+    }
+
 }
 
 /* medium screen styles */
@@ -207,8 +211,6 @@ body {
         width: 720px;
         height: 208px;
         display: flex;
-        
-
     }
 
     .main__p__wrapper {
@@ -217,6 +219,7 @@ body {
         justify-content: space-around;
         align-content: flex-start;
     }
+
 
 }
 
@@ -285,6 +288,11 @@ body {
         justify-content: space-between;
         flex-direction: row-reverse;
         align-items: center;
+    }
+
+    .main__p__wrapper {
+        margin-left: 5%;
+        width: 45%;
     }
 
     .main__article {

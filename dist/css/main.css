@@ -1,6 +1,6 @@
 @font-face {
   font-family: TT Lakes Regular;
-  src: url("./assets/font-style/TTLakes-Regular.ttf");
+  src: url("../../assets/font-style/TTLakes-Regular.ttf");
 }
 body {
   margin: 0;
@@ -12,6 +12,7 @@ body {
 
 /* common styles */
 .section {
+  transition: 1s;
   max-width: 100%;
   background-color: #F8F8F8;
 }
@@ -154,6 +155,7 @@ a {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
   }
   .section__header img {
     margin-right: 20px;

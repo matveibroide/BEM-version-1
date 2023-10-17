@@ -1,14 +1,6 @@
-@font-face {
-  font-family: TT Lakes Regular;
-  src: url("./TTLakes-Regular.ttf");
-}
 * {
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: TT Lakes Regular;
 }
 
 .brands-container__button {

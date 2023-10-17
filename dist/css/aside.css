@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+aside {
+  transform: translate(-100%);
+  transition: 1s;
+  background-color: white;
+  z-index: 2;
+  display: none;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  box-sizing: border-box;
+  width: 320px;
+  height: 1024px;
+}
+
+.aside__menu {
+  margin-left: 10%;
+  margin-top: 10%;
+  justify-content: space-between;
+  display: flex;
+  max-width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.aside__menu__svg {
+  cursor: pointer;
+}
+
+.aside__menu svg:nth-child(3) {
+  margin-right: 5%;
+}
+
+.aside__nav {
+  margin-top: 20%;
+  height: 40%;
+}
+
+.aside__nav__items {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.aside__nav__items__item {
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+}
+
+.aside__nav__items__item:hover {
+  opacity: 0.4;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper::before {
+  content: "";
+  opacity: 0;
+  transition: 1s;
+  width: 20px;
+  height: 40px;
+}
+
+.wrapper:hover::before {
+  content: url('data:image/svg+xml,<svg width="4" height="32" viewBox="0 0 4 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 4C4 1.79086 2.20914 0 0 0V32C2.20914 32 4 30.2091 4 28V4Z" fill="%2341F6D7"/></svg>');
+  width: 10px;
+  opacity: 1;
+}
+
+.aside__footer__menu__items {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.aside__footer__menu__items__item {
+  cursor: pointer;
+}
+
+.aside__footer {
+  margin-top: 400px;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 30%;
+  max-width: 70%;
+}
+
+.aside__footer__language-buttons__items {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.aside__footer__language-buttons__items li:hover {
+  transition: 1s;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+@media (width > 768px) {
+  aside {
+    display: none;
+  }
+}/*# sourceMappingURL=aside.css.map */

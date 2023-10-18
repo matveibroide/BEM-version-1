@@ -15,7 +15,7 @@ body {
 /* common styles */
 
 .section {
-    transition: 1s;
+    
     max-width: 100%;
     background-color:#F8F8F8;
 }
@@ -79,6 +79,7 @@ a {text-decoration: none;
 }
 
 .main {
+    
     max-width: 100%;
     display: flex;
     flex-direction: column;

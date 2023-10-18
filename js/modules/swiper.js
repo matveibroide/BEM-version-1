@@ -1,27 +1,43 @@
-
+/* import Swiper from 'swiper'; */
 
 //aside
 
 let bars = document.querySelector('.main__nav__bars');
 let closeMenu = document.querySelector('.aside__menu__svg')
 let aside = document.querySelector('.aside');
-let sectionMain = document.querySelector('.main');
-let header = document.querySelector('.section__header__nav__items')
+let sectionMain = document.querySelector('.section');
+
+let menuActive = false;
 
 
 bars.addEventListener('click',(e)=>{
     e.preventDefault()
     aside.style.transform = 'translate(0%)'
-    header.style.opacity = '0.3'
     sectionMain.style.opacity = '0.3'
+    menuActive = true
+    
 
 })
+
+
 
 closeMenu.addEventListener('click',(e)=>{
     e.preventDefault()
     aside.style.transform = 'translate(-100%)'
-    header.style.opacity = '1'
     sectionMain.style.opacity = '1'
+    menuActive = false
+    
+})
+
+
+
+sectionMain.addEventListener('click',(e)=>{
+    if (menuActive && e.target.className != 'main__nav__bars'){
+        aside.style.transform = 'translate(-100%)'
+        sectionMain.style.opacity = '1'
+    }
+    
+    
 })
 
 
@@ -175,3 +191,28 @@ const updatedContent = arraySlidesContent.map((item,i)=>{
 })
 
 
+// services slide
+
+const slidesServices = document.getElementsByClassName("services-container__swiper__swiper-wrapper__slide");
+const arraySlidesServices = Array.from(slidesServices);
+const slidesServicesContent = arraySlidesServices.map((item,i)=>{
+
+    item.innerHTML = `<h1 class = 'services-container__swiper__swiper-wrapper__slide__header'>Ремонт ноутбуков</h1> 
+                        <div class='services-container__swiper__swiper-wrapper__slide__svg'>${commonSvg}</div>`
+    return item
+})
+
+
+
+
+let servicesSwiper = new Swiper('.services-container__swiper', {
+mousewheel:false,
+speed:1000,
+direction: 'horizontal',
+loop:true,
+slidesPerView: 3,
+spaceBetween: 25,
+
+    });
+
+    

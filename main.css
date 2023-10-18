@@ -20,6 +20,7 @@ body {
 }
 
 .section__header__nav__items {
+    transition: 1s;
     margin-top:0;
     padding: 0;
     list-style: none;

@@ -121,6 +121,8 @@ aside {
 
 @media(width>768px) {
     aside {
+        height: 100%;
+        position: static;
         display: flex;
         transform: translate(0%)
     }

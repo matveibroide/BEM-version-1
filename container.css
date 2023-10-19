@@ -1,9 +1,11 @@
 .container {
     margin: 0 auto;
-    max-width: 1120px;
+    max-width: 1440px;
     background-color: aqua;
 
 }
+
+
 
 @media (width>768px) {
     .aside {
@@ -14,7 +16,7 @@
 
     .container {
         display: grid;
-        grid-template-columns: 320px max-content;
+        grid-template-columns: 320px 1120px;
         grid-auto-rows: min-content;
     }
 

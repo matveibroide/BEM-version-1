@@ -1,14 +1,15 @@
 .services-container {
     background:#F8F8F8;
     height: fit-content;
+    max-width: 100%;
 }
 
 .services-container__swiper {
     
-        width: 100%;
-        background-color: #F8F8F8;
-        height: fit-content;
-      
+    max-width: 100%;
+    background-color: #F8F8F8;
+    height: fit-content;
+    
 }
 
 
@@ -41,7 +42,10 @@
     
   }
 
-
+/*   .services-container .services-container__swiper .swiper-slide {
+    width: fit-content;
+    height: fit-content;
+    } */
 
 .services-container__swiper__swiper-wrapper__slide {
     width: 224px;

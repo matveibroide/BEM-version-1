@@ -3,7 +3,7 @@
 //aside
 
 let bars = document.querySelector('.main__nav__bars');
-let closeMenu = document.querySelector('.aside__menu__svg')
+let closeMenu = document.querySelector('.aside__menu__svg-x')
 let aside = document.querySelector('.aside');
 let sectionMain = document.querySelector('.section');
 
@@ -11,11 +11,11 @@ let menuActive = false;
 
 
 bars.addEventListener('click',(e)=>{
+
     e.preventDefault()
     aside.style.transform = 'translate(0%)'
     sectionMain.style.opacity = '0.3'
     menuActive = true
-    
 
 })
 
@@ -65,7 +65,12 @@ btn.innerHTML = btnActive ?
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5001 7.50008L12.0001 10.0001L9.50008 7.50008C9.22393 7.22393 8.77622 7.22393 8.50008 7.50008C8.22393 7.77622 8.22393 8.22393 8.50008 8.50008L11.293 11.293C11.6835 11.6835 12.3167 11.6835 12.7072 11.293L15.5001 8.50008C15.7762 8.22393 15.7762 7.77622 15.5001 7.50008C15.2239 7.22393 14.7762 7.22393 14.5001 7.50008ZM14.5001 13.5001L12.0001 16.0001L9.50008 13.5001C9.22393 13.2239 8.77622 13.2239 8.50008 13.5001C8.22393 13.7762 8.22393 14.2239 8.50008 14.5001L11.293 17.293C11.6835 17.6835 12.3167 17.6835 12.7072 17.293L15.5001 14.5001C15.7762 14.2239 15.7762 13.7762 15.5001 13.5001C15.2239 13.2239 14.7762 13.2239 14.5001 13.5001Z" fill="#41F6D7"/>
 </svg>`;
 
-height = btnActive ? '300px' : '200px'
+
+if (btnActive && innerWidth>320) {
+    height = '300px'
+}
+
+else {height = '200px'}
 
 swiper = new Swiper('.swiper', {
 
@@ -76,6 +81,7 @@ loop:true,
 allowSlidePrev:true,
 slidesPerView: 1.3,
 spaceBetween: 10,
+pagination:true,
 breakpoints: {
 // when window width is >= 640px
 768: {
@@ -155,17 +161,35 @@ clickable:true
 }
 });
 
+document.querySelector('.swiper').style.height = `${height}`
 
 window.addEventListener('resize',(e)=>{
 
 e.preventDefault()
-console.log('resize')
-if (innerWidth<=320) {
+
+if (innerWidth>768) {
+    aside.style.transform = 'translate(0%)'
+    sectionMain.style.opacity = 1
+}
+
+if (innerWidth<=768 && menuActive) {
+    sectionMain.style.opacity = 0.3
+    aside.style.transform = 'translate(0%)'
+}
+
+if (innerWidth<=768 && !menuActive) {
+    aside.style.transform = 'translate(-100%)'
+}
+
+/* if (innerWidth<=320) {
     document.querySelector('.swiper').style.height = '110px'
     
 }
 else if (innerWidth>320 && !btnActive) {document.querySelector('.swiper').style.height = '200px'}
-else {document.querySelector('.swiper').style.height = '300px'}
+
+else {
+    document.querySelector('.swiper').style.height = '300px'
+} */
 })
 
 
@@ -206,13 +230,28 @@ const slidesServicesContent = arraySlidesServices.map((item,i)=>{
 
 
 let servicesSwiper = new Swiper('.services-container__swiper', {
-mousewheel:false,
-speed:1000,
-direction: 'horizontal',
-loop:true,
-slidesPerView: 3,
-spaceBetween: 25,
+    mousewheel:false,
+    loop:false,
+    speed:1000,
+    direction:'horizontal',
+    breakpoints: {
+    
+    768: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+        pagination:false,
+        allowSlidePrev:false,
+        allowSlideNext:false,
+    },
+    1120: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+        allowSlidePrev:false,
+        allowSlideNext:false,
+    }
+    }
+    
 
     });
 
-    
+   

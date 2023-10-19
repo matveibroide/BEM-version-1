@@ -20,7 +20,7 @@ aside {
     align-items: left;
     box-sizing: border-box;
     width: 320px;
-    height: 1024px;
+    
 }
 
 .aside__menu {
@@ -117,12 +117,15 @@ aside {
 }
 
 
-@media (width<=768px) {
-    
-}
+
 
 @media(width>768px) {
     aside {
+        display: flex;
+        transform: translate(0%)
+    }
+
+    .aside__menu__svg-x {
         display: none;
     }
 }

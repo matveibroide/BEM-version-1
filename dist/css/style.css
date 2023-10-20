@@ -1,6 +1,6 @@
 @font-face {
   font-family: TT Lakes Regular;
-  src: url("./assets/font-style/TTLakes-Regular.ttf");
+  src: url("../../assets/font-style/TTLakes-Regular.ttf");
 }
 body {
   margin: 0;
@@ -149,7 +149,7 @@ a {
 /* big screen styles */
 @media (width > 768px) {
   .section {
-    max-width: 1120px;
+    max-width: 100%;
   }
   .section__header {
     display: flex;
@@ -211,8 +211,8 @@ a {
   }
 }
 .container {
-  max-width: 1440px;
-  background-color: aqua;
+  max-width: 100%;
+  background-color: rgb(60, 255, 0);
 }
 
 @media (width > 768px) {
@@ -223,7 +223,7 @@ a {
   }
   .container {
     display: grid;
-    grid-template-columns: 320px 1120px;
+    grid-template-columns: 320px 1fr;
     grid-auto-rows: min-content;
   }
   .section {
@@ -346,7 +346,7 @@ body {
 }
 @media (width >= 1120px) {
   .brands-container {
-    max-width: 1120px;
+    max-width: 100%;
     height: -moz-fit-content;
     height: fit-content;
   }

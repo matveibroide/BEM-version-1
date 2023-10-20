@@ -105,7 +105,7 @@ body {
 }
 @media (width >= 1120px) {
   .brands-container {
-    max-width: 1120px;
+    max-width: 100%;
     height: -moz-fit-content;
     height: fit-content;
   }

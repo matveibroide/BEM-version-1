@@ -1,6 +1,6 @@
 @font-face {
   font-family: TT Lakes Regular;
-  src: url("./assets/font-style/TTLakes-Regular.ttf");
+  src: url("../../assets/font-style/TTLakes-Regular.ttf");
 }
 body {
   margin: 0;
@@ -149,7 +149,7 @@ a {
 /* big screen styles */
 @media (width > 768px) {
   .section {
-    max-width: 1120px;
+    max-width: 100%;
   }
   .section__header {
     display: flex;

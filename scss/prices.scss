@@ -1,6 +1,8 @@
+@import './_variables';
+
 .prices {
     
-    background-color: #F8F8F8;
+    background-color: $background-color-secondary;
     max-height: 720px;
     max-width: 100%;
     display: grid;
@@ -23,7 +25,7 @@
     font-weight: 100;
     font-size: 16px;
     text-align: left;
-    background: linear-gradient(to right, #F8F8F8, rgb(255, 255, 255));
+    background: linear-gradient(to right, $background-color-secondary, rgb(255, 255, 255));
     margin-bottom: 15px;
     grid-column: 1;
 }
@@ -40,7 +42,7 @@
 }
 
 .prices__prices-wrapper__items {
-    background-color: #ffffff;
+    background-color: $background-color-main;
     border-radius: 10px;
     width: 100%;
     flex-direction: column;
@@ -52,7 +54,7 @@
 .prices__prices-wrapper__items__item {
     display: flex;
     height: 10%;
-    border-bottom: 1px solid #EAEAEA;
+    border-bottom: 1px solid $border-bottom-color;
     justify-content: space-between;
     width: 95%;
     margin: 0 auto;
@@ -74,13 +76,13 @@
 }
 
 .prices__prices-wrapper__items__item-main {
-    background: #F8F8F8;
+    background: $background-color-secondary;
     width: 95%;
     margin: 0 auto;
     border: none;
     height: fit-content;
     margin-bottom: 2%;
-    color: #80949F;
+    color: $font-color-secondary;
     
 }
 

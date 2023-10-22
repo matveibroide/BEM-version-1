@@ -2,7 +2,13 @@
   font-family: TT Lakes Regular;
   src: url("../../assets/font-style/TTLakes-Regular.ttf");
 }
+html {
+  height: 100%;
+}
+
 body {
+  box-sizing: border-box;
+  min-height: 100%;
   margin: 0;
   font-family: "TT Lakes Regular";
   display: flex;
@@ -12,7 +18,7 @@ body {
 
 /* common styles */
 .section {
-  max-width: 100%;
+  width: 100%;
   background-color: #F8F8F8;
 }
 
@@ -26,7 +32,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
 .main__search-menu__button {

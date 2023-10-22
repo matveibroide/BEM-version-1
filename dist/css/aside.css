@@ -7,15 +7,17 @@ aside {
   opacity: 1;
   transform: translate(-100%);
   transition: 1s;
-  background-color: white;
+  background-color: #FFFFFF;
   z-index: 3;
   display: none;
   position: absolute;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   align-items: left;
   box-sizing: border-box;
-  width: 320px;
+  min-width: 320px;
+  min-height: 1024px;
 }
 
 .aside__menu {
@@ -92,13 +94,14 @@ aside {
 }
 
 .aside__footer {
-  margin-top: 400px;
+  margin-top: 30%;
   margin-left: 10%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   height: 30%;
   max-width: 70%;
+  background-color: transparent;
 }
 
 .aside__footer__language-buttons__items {

@@ -5,8 +5,8 @@
 let bars = document.querySelector('.main__nav__bars');
 let closeMenu = document.querySelector('.aside__menu__svg-x')
 let aside = document.querySelector('.aside');
-let sectionMain = document.querySelector('.section');
-
+let innerContent = document.querySelector('.inner-content-container');
+aside.style.height = '100%'
 let menuActive = false;
 
 
@@ -14,7 +14,7 @@ bars.addEventListener('click',(e)=>{
 
     e.preventDefault()
     aside.style.transform = 'translate(0%)'
-    sectionMain.style.opacity = '0.3'
+    innerContent.style.opacity = '0.3'
     menuActive = true
 
 })
@@ -24,24 +24,54 @@ bars.addEventListener('click',(e)=>{
 closeMenu.addEventListener('click',(e)=>{
     e.preventDefault()
     aside.style.transform = 'translate(-100%)'
-    sectionMain.style.opacity = '1'
+    innerContent.style.opacity = '1'
     menuActive = false
     
 })
 
 
 
-sectionMain.addEventListener('click',(e)=>{
+innerContent.addEventListener('click',(e)=>{
+    e.preventDefault()
     if (menuActive && e.target.className != 'main__nav__bars'){
         aside.style.transform = 'translate(-100%)'
-        sectionMain.style.opacity = '1'
+        innerContent.style.opacity = '1'
     }
     
     
 })
 
+window.addEventListener('resize',(e)=>{
 
-//swiper
+    e.preventDefault()
+    
+    if (innerWidth>768) {
+        aside.style.transform = 'translate(0%)'
+        innerContent.style.opacity = 1
+    }
+    
+    if (innerWidth<=768 && menuActive) {
+        innerContent.style.opacity = 0.3
+        aside.style.transform = 'translate(0%)'
+    }
+    
+    if (innerWidth<=768 && !menuActive) {
+        aside.style.transform = 'translate(-100%)'
+    }
+    
+    /* if (innerWidth<=320) {
+        document.querySelector('.swiper').style.height = '110px'
+        
+    }
+    else if (innerWidth>320 && !btnActive) {document.querySelector('.swiper').style.height = '200px'}
+    
+    else {
+        document.querySelector('.swiper').style.height = '300px'
+    } */
+    })
+
+
+//swiper brands
 
 let btnActive = false;
 let rows = 2;
@@ -163,37 +193,6 @@ clickable:true
 
 document.querySelector('.swiper').style.height = `${height}`
 
-window.addEventListener('resize',(e)=>{
-
-e.preventDefault()
-
-if (innerWidth>768) {
-    aside.style.transform = 'translate(0%)'
-    sectionMain.style.opacity = 1
-}
-
-if (innerWidth<=768 && menuActive) {
-    sectionMain.style.opacity = 0.3
-    aside.style.transform = 'translate(0%)'
-}
-
-if (innerWidth<=768 && !menuActive) {
-    aside.style.transform = 'translate(-100%)'
-}
-
-/* if (innerWidth<=320) {
-    document.querySelector('.swiper').style.height = '110px'
-    
-}
-else if (innerWidth>320 && !btnActive) {document.querySelector('.swiper').style.height = '200px'}
-
-else {
-    document.querySelector('.swiper').style.height = '300px'
-} */
-})
-
-
-
 const slidesContent = document.getElementsByClassName("slide");
 
 const arraySlidesContent = Array.from(slidesContent);
@@ -215,9 +214,9 @@ const updatedContent = arraySlidesContent.map((item,i)=>{
 })
 
 
-// services slide
+// swiper services 
 
-const slidesServices = document.getElementsByClassName("services-container__swiper__swiper-wrapper__slide");
+/* const slidesServices = document.getElementsByClassName("services-container__swiper__swiper-wrapper__slide");
 const arraySlidesServices = Array.from(slidesServices);
 const slidesServicesContent = arraySlidesServices.map((item,i)=>{
 
@@ -225,33 +224,23 @@ const slidesServicesContent = arraySlidesServices.map((item,i)=>{
                         <div class='services-container__swiper__swiper-wrapper__slide__svg'>${commonSvg}</div>`
     return item
 })
+ */
 
 
 
-
-let servicesSwiper = new Swiper('.services-container__swiper', {
+/* let servicesSwiper = new Swiper('.services-wrapper .services-swiper', {
     mousewheel:false,
     loop:false,
-    speed:1000,
+    speed:3000,
     direction:'horizontal',
-    breakpoints: {
-    
-    768: {
-        slidesPerView: 3,
-        spaceBetween: 40,
-        pagination:false,
-        allowSlidePrev:false,
-        allowSlideNext:false,
-    },
-    1120: {
-        slidesPerView: 4,
-        spaceBetween: 40,
-        allowSlidePrev:false,
-        allowSlideNext:false,
-    }
-    }
+    slidesPerView:1.5,
+    pagination:false,
+    navigation:false,
+    scrollbar:false
     
 
-    });
+    }); */
+
+  
 
    

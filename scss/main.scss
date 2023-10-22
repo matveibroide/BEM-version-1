@@ -1,10 +1,18 @@
+@import './_variables';
+
 @font-face {
-    font-family: TT Lakes Regular;
-    src: url("../../assets/font-style/TTLakes-Regular.ttf");
-  }
+font-family: TT Lakes Regular;
+src: url("../../assets/font-style/TTLakes-Regular.ttf");
+}
+
+html {
+height: 100%;
+
+}
 
 body {
-    
+    box-sizing: border-box;
+    min-height: 100%;
     margin: 0;
     font-family: 'TT Lakes Regular';
     display: flex;
@@ -15,8 +23,8 @@ body {
 /* common styles */
 
 .section {
-    max-width: 100%;
-    background-color:#F8F8F8;
+    width: 100%;
+    background-color:$background-color-secondary;
 }
 
 .section__header__nav__items {
@@ -29,7 +37,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #ffffff;
+    background-color: $background-color-main;
     
 }
 
@@ -43,7 +51,7 @@ body {
 
 .main__search-menu__button:hover {
     
-    border: 2px solid #B8FFEC;
+    border: 2px solid $border-btns-color;
 }
 
 .section__header__nav img {
@@ -75,7 +83,7 @@ body {
 
 a {text-decoration: none;
     width: 100%;
-    color:#80949F;
+    color:$font-color-secondary;
 }
 
 .main {

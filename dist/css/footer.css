@@ -1,0 +1,22 @@
+footer {
+  max-width: 100%;
+  background-color: #F8F8F8;
+}
+
+.footer__items {
+  list-style: none;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__items__item {
+  text-align: center;
+  color: #80949F;
+}
+
+@media (width <= 320px) {
+  .footer__items {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=footer.css.map */

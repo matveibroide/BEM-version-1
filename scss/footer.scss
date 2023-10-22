@@ -1,0 +1,25 @@
+@import './_variables';
+
+footer {
+    max-width: 100%;
+    background-color: $background-color-secondary;
+}
+
+.footer__items {
+    list-style: none;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.footer__items__item {
+    text-align: center;
+    color: $font-color-secondary;
+}
+
+@media(width<=320px) {
+    .footer__items {
+        flex-direction: column;
+    }
+}

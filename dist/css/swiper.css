@@ -20,7 +20,7 @@ body {
 }
 
 .brands-container {
-  width: 100%;
+  max-width: 100%;
   background-color: #F8F8F8;
   height: -moz-fit-content;
   height: fit-content;
@@ -54,25 +54,27 @@ body {
 }
 
 .slide {
+  background-color: #FFFFFF;
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 72px;
   width: 240px;
   box-sizing: border-box;
-  border: 1px solid rgb(193, 188, 188);
+  border: 1px solid #EAEAEA;
   border-radius: 10px;
 }
 
 .swiper-pagination span {
-  background-color: rgb(163, 161, 161);
+  background-color: #EAEAEA;
 }
 
 @media (width <= 320px) {
-  .brands-container .swiper {
-    max-width: 310px;
-    margin-left: 10px;
-  }
+  /* .brands-container .brands-swiper {
+
+      max-width: 310px;
+      margin-left:10px;
+  } */
   .swiper .swiper-wrapper {
     height: 110px;
   }

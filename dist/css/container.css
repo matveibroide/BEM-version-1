@@ -1,11 +1,10 @@
 .container {
-  box-sizing: border-box;
   height: 100%;
-  max-width: 100%;
+  max-width: 1440px;
 }
 
 .inner-content-container {
-  width: 100%;
+  width: calc(100% - 320px);
 }
 
 @media (width > 768px) {

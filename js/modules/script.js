@@ -59,15 +59,6 @@ window.addEventListener('resize',(e)=>{
         aside.style.transform = 'translate(-100%)'
     }
     
-    /* if (innerWidth<=320) {
-        document.querySelector('.swiper').style.height = '110px'
-        
-    }
-    else if (innerWidth>320 && !btnActive) {document.querySelector('.swiper').style.height = '200px'}
-    
-    else {
-        document.querySelector('.swiper').style.height = '300px'
-    } */
     })
 
 
@@ -145,6 +136,13 @@ clickable:true
 },
 });
 
+
+const updatedContent = arraySlidesContent.map((item,i)=>{
+
+    item.innerHTML = `<img src='${svgArray[i]}'></img> ${commonSvg}`
+    return item
+})
+
 document.querySelector('.swiper').style.height = `${height}`
 
 }
@@ -216,7 +214,7 @@ const updatedContent = arraySlidesContent.map((item,i)=>{
 
 // swiper services 
 
-/* const slidesServices = document.getElementsByClassName("services-container__swiper__swiper-wrapper__slide");
+const slidesServices = document.getElementsByClassName("services-container__swiper__swiper-wrapper__slide");
 const arraySlidesServices = Array.from(slidesServices);
 const slidesServicesContent = arraySlidesServices.map((item,i)=>{
 
@@ -224,22 +222,20 @@ const slidesServicesContent = arraySlidesServices.map((item,i)=>{
                         <div class='services-container__swiper__swiper-wrapper__slide__svg'>${commonSvg}</div>`
     return item
 })
- */
 
 
 
-/* let servicesSwiper = new Swiper('.services-wrapper .services-swiper', {
+
+let servicesSwiper = new Swiper('#second', {
     mousewheel:false,
     loop:false,
-    speed:3000,
+    speed:1000,
     direction:'horizontal',
     slidesPerView:1.5,
     pagination:false,
     navigation:false,
     scrollbar:false
-    
-
-    }); */
+    });
 
   
 

@@ -10,6 +10,15 @@
 }
 
 
+@media(width<=768px) {
+
+    .inner-content-container {
+        width: 100%;
+    }
+    
+}
+
+
 @media (width>768px) {
     .aside {
         display: flex;

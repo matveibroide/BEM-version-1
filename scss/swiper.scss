@@ -27,9 +27,8 @@ background-color: $background-color-secondary;
 height: fit-content;
 }
 
-.brands-container__header {
+.section-header {
 width: 100%;
-text-align: center;
 padding-top: 10px;
 display: flex;
 align-items: center;
@@ -61,7 +60,7 @@ display: flex;
 justify-content:space-around;
 align-items:center;
 height: 72px;
-width: 240px;
+max-width: 240px;
 box-sizing: border-box;
 
 border:1px solid $border-bottom-color;

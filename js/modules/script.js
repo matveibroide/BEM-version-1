@@ -1,6 +1,9 @@
-/* import Swiper from 'swiper'; */
 
-//aside
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs';
+
+document.addEventListener("DOMContentLoaded", (event) => {
+
+    //aside
 
 let bars = document.querySelector('.main__nav__bars');
 let closeMenu = document.querySelector('.aside__menu__svg-x')
@@ -93,7 +96,7 @@ if (btnActive && innerWidth>320) {
 
 else {height = '200px'}
 
-swiper = new Swiper('.swiper', {
+swiper = new Swiper('.brands-swiper', {
 
 mousewheel:false,
 speed:1000,
@@ -143,13 +146,13 @@ const updatedContent = arraySlidesContent.map((item,i)=>{
     return item
 })
 
-document.querySelector('.swiper').style.height = `${height}`
+document.querySelector('.brands-swiper').style.height = `${height}`
 
 }
 
 )
 
-let swiper = new Swiper('.swiper', {
+let swiper = new Swiper('.brands-swiper', {
 
 mousewheel:false,
 speed:1000,
@@ -215,28 +218,15 @@ const updatedContent = arraySlidesContent.map((item,i)=>{
 // swiper services 
 
 const slidesServices = document.getElementsByClassName("services-container__swiper__swiper-wrapper__slide");
-const arraySlidesServices = Array.from(slidesServices);
-const slidesServicesContent = arraySlidesServices.map((item,i)=>{
+    const arraySlidesServices = Array.from(slidesServices);
+    
+    const slidesServicesContent = arraySlidesServices.map((item,i)=>{
+    
+        item.innerHTML = `<h1 class = 'services-container__swiper__swiper-wrapper__slide__header'>Ремонт ноутбуков</h1> 
+                            <div class='services-container__swiper__swiper-wrapper__slide__svg'>${commonSvg}</div>`
+        return item
+    })
+    
 
-    item.innerHTML = `<h1 class = 'services-container__swiper__swiper-wrapper__slide__header'>Ремонт ноутбуков</h1> 
-                        <div class='services-container__swiper__swiper-wrapper__slide__svg'>${commonSvg}</div>`
-    return item
-})
+});
 
-
-
-
-let servicesSwiper = new Swiper('#second', {
-    mousewheel:false,
-    loop:false,
-    speed:1000,
-    direction:'horizontal',
-    slidesPerView:1.5,
-    pagination:false,
-    navigation:false,
-    scrollbar:false
-    });
-
-  
-
-   

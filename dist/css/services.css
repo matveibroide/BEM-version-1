@@ -1,5 +1,23 @@
+.services-wrapper {
+  background-color: #F8F8F8;
+}
+
+.header-item {
+  width: 90%;
+  text-transform: uppercase;
+  margin: 0 auto;
+  font-weight: 100;
+  font-size: 16px;
+  text-align: left;
+}
+
 .services-swiper {
-  max-width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 288px;
+}
+
+.services-container__swiper__swiper-wrapper__slide {
+  max-width: 224px;
+  min-height: 160px;
+  border: 1px solid #EAEAEA;
+  background-color: #FFFFFF;
 }/*# sourceMappingURL=services.css.map */

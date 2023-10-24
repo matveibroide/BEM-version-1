@@ -1,5 +1,7 @@
 @import './_variables';
 
+
+
 .prices {
     
     background-color: $background-color-secondary;
@@ -33,15 +35,13 @@
 .prices__prices-wrapper {
     width: 95%;
     margin: 0 auto;
-    grid-row: 2;
-    grid-column: 1;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .prices__prices-wrapper__items {
+    font-size: 14px;
     background-color: $background-color-main;
     border-radius: 10px;
     width: 100%;
@@ -53,7 +53,8 @@
 
 .prices__prices-wrapper__items__item {
     display: flex;
-    height: 10%;
+    height: 54px;
+    align-items: center;
     border-bottom: 1px solid $border-bottom-color;
     justify-content: space-between;
     width: 95%;
@@ -86,7 +87,89 @@
     
 }
 
-.prices-wrapper__proposal {
-    width: 30%;
+.prices__proposal-wrapper {
+    font-size: 14px;
+    margin: 5% 0 5% 0;
+    background:$background-color-secondary;
+    width: 90%;
     margin: 3% 5% 5% auto;
 }
+
+@media(width<=320px) {
+
+//swiper
+
+    .prices-swiper {
+        max-width: 96%;
+        height: 220px;
+        margin-left: auto;
+
+    }
+
+    .prices {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .prices__prices-wrapper {
+        display: none;
+    }
+
+    .prices__swiper__swiper-wrapper__slide {
+        box-sizing: border-box;
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 14px;
+        max-width: 260px;
+        height: 200px;
+        background-color: $background-color-main;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .prices__swiper__swiper-wrapper__bottom-content {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .prices__swiper__swiper-wrapper__bottom-content button {
+        background: transparent;
+        border: none;
+    }
+
+    .prices__swiper__swiper-wrapper__slide__description :first-child {
+        color: $font-color-secondary;
+    }
+
+    .prices__swiper__swiper-wrapper__slide__price :first-child {
+        color: $font-color-secondary;
+    }
+
+    .prices__swiper__swiper-wrapper__slide__bottom-content-time :first-child  {
+        color: $font-color-secondary;
+    }
+
+    .prices__proposal-wrapper__btn {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        background-color: transparent;
+        border: none;
+        width: 64%;
+    }
+
+    .prices__proposal-wrapper__btn svg {
+        width: 100%;
+    }
+
+    
+    
+}
+
+@media(width>320px) {
+    .prices-swiper {
+        display: none;
+    }
+}
+

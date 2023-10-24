@@ -1,5 +1,8 @@
+@import './_variables';
+
 .container {
-    
+   
+    background-color: $background-color-secondary;
     height: 100%;
     max-width: 1440px;
    

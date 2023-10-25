@@ -215,7 +215,7 @@ const updatedContent = arraySlidesContent.map((item,i)=>{
 })
 
 
-// swiper services 
+// swiper services content
 
 const slidesServices = document.getElementsByClassName("services-container__swiper__swiper-wrapper__slide");
     const arraySlidesServices = Array.from(slidesServices);

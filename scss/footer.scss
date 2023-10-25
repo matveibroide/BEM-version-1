@@ -1,11 +1,16 @@
 @import './_variables';
 
 footer {
+    padding-top: 5%;
+    background-color: $background-color-main;
+    border-top:1px solid $border-btns-color;
+    height: fit-content;
     max-width: 100%;
     background-color: $background-color-secondary;
 }
 
 .footer__items {
+    
     list-style: none;
     max-width: 100%;
     display: flex;
@@ -18,8 +23,16 @@ footer {
     color: $font-color-secondary;
 }
 
-@media(width<=320px) {
+@media(width<=768px) {
+    .footer__items__item {
+        font-size: 14px;
+    }
+}
+
+@media(width<=420px) {
     .footer__items {
+        height: 100px;
         flex-direction: column;
+        justify-content: space-between;
     }
 }

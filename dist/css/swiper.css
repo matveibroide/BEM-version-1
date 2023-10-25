@@ -85,8 +85,9 @@ body {
   }
 }
 @media (width >= 768px) {
-  .brands-container .swiper {
-    max-width: 768px;
+  .brands-swiper {
+    margin-left: auto;
+    max-width: 96%;
   }
   .brands-container__header__item {
     text-align: left;

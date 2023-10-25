@@ -1,4 +1,9 @@
 footer {
+  padding-top: 5%;
+  background-color: #FFFFFF;
+  border-top: 1px solid #B8FFEC;
+  height: -moz-fit-content;
+  height: fit-content;
   max-width: 100%;
   background-color: #F8F8F8;
 }
@@ -15,8 +20,15 @@ footer {
   color: #80949F;
 }
 
-@media (width <= 320px) {
+@media (width <= 768px) {
+  .footer__items__item {
+    font-size: 14px;
+  }
+}
+@media (width <= 420px) {
   .footer__items {
+    height: 100px;
     flex-direction: column;
+    justify-content: space-between;
   }
 }/*# sourceMappingURL=footer.css.map */

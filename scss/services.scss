@@ -16,6 +16,7 @@ text-align: left;
 
 .services-swiper {
     height: 288px;
+    max-width: 90%;
 }
 
 .services-container__swiper__swiper-wrapper__slide {
@@ -23,5 +24,23 @@ text-align: left;
     min-height: 160px;
     border: 1px solid $border-bottom-color;
     background-color: $background-color-main;
+}
+
+.services-container__swiper__swiper-wrapper__btn {
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+}
+
+@media(width<=768px) {
+
+    .services-swiper {
+        height: 288px;
+        max-width: 96%;
+        margin-left: auto;
+    }
+    .services-container__swiper__swiper-wrapper__btn {
+        display: none;
+    }
 }
 

@@ -13,6 +13,7 @@
 
 .services-swiper {
   height: 288px;
+  max-width: 90%;
 }
 
 .services-container__swiper__swiper-wrapper__slide {
@@ -20,4 +21,22 @@
   min-height: 160px;
   border: 1px solid #EAEAEA;
   background-color: #FFFFFF;
+}
+
+.services-container__swiper__swiper-wrapper__btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: transparent;
+  border: none;
+}
+
+@media (width <= 768px) {
+  .services-swiper {
+    height: 288px;
+    max-width: 96%;
+    margin-left: auto;
+  }
+  .services-container__swiper__swiper-wrapper__btn {
+    display: none;
+  }
 }/*# sourceMappingURL=services.css.map */

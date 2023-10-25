@@ -42,6 +42,10 @@ body {
   background-color: transparent;
 }
 
+.section__header__wrapper__item {
+  margin-left: 20px;
+}
+
 .main__search-menu__button:hover {
   border: 2px solid #B8FFEC;
 }
@@ -344,8 +348,9 @@ body {
   }
 }
 @media (width >= 768px) {
-  .brands-container .swiper {
-    max-width: 768px;
+  .brands-swiper {
+    margin-left: auto;
+    max-width: 96%;
   }
   .brands-container__header__item {
     text-align: left;
@@ -602,10 +607,19 @@ aside {
   margin: 5% 0 5% 0;
   background: #F8F8F8;
   width: 90%;
-  margin: 3% 5% 5% auto;
+  margin: 0 5% 5% auto;
 }
 
-@media (width <= 320px) {
+.prices__proposal-wrapper__btn {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: transparent;
+  border: none;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@media (width <= 420px) {
   .prices-swiper {
     max-width: 96%;
     height: 220px;
@@ -653,7 +667,7 @@ aside {
     margin-bottom: 5%;
     background-color: transparent;
     border: none;
-    width: 64%;
+    width: 70%;
   }
   .prices__proposal-wrapper__btn svg {
     width: 100%;
@@ -679,6 +693,7 @@ aside {
 
 .services-swiper {
   height: 288px;
+  max-width: 90%;
 }
 
 .services-container__swiper__swiper-wrapper__slide {
@@ -688,7 +703,29 @@ aside {
   background-color: #FFFFFF;
 }
 
+.services-container__swiper__swiper-wrapper__btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: transparent;
+  border: none;
+}
+
+@media (width <= 768px) {
+  .services-swiper {
+    height: 288px;
+    max-width: 96%;
+    margin-left: auto;
+  }
+  .services-container__swiper__swiper-wrapper__btn {
+    display: none;
+  }
+}
 footer {
+  padding-top: 5%;
+  background-color: #FFFFFF;
+  border-top: 1px solid #B8FFEC;
+  height: -moz-fit-content;
+  height: fit-content;
   max-width: 100%;
   background-color: #F8F8F8;
 }
@@ -705,8 +742,15 @@ footer {
   color: #80949F;
 }
 
-@media (width <= 320px) {
+@media (width <= 768px) {
+  .footer__items__item {
+    font-size: 14px;
+  }
+}
+@media (width <= 420px) {
   .footer__items {
+    height: 100px;
     flex-direction: column;
+    justify-content: space-between;
   }
 }/*# sourceMappingURL=style.css.map */

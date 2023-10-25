@@ -92,10 +92,19 @@
     margin: 5% 0 5% 0;
     background:$background-color-secondary;
     width: 90%;
-    margin: 3% 5% 5% auto;
+    margin: 0 5% 5% auto;
 }
 
-@media(width<=320px) {
+
+.prices__proposal-wrapper__btn {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: transparent;
+    border: none;
+    width: fit-content;
+}
+
+@media(width<=420px) {
 
 //swiper
 
@@ -156,7 +165,7 @@
         margin-bottom: 5%;
         background-color: transparent;
         border: none;
-        width: 64%;
+        width: 70%;
     }
 
     .prices__proposal-wrapper__btn svg {

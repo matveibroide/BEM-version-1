@@ -12,7 +12,7 @@
 }
 
 .services-swiper {
-  height: 288px;
+  height: 188px;
   max-width: 90%;
 }
 
@@ -28,15 +28,22 @@
   width: fit-content;
   background-color: transparent;
   border: none;
+  margin: 5px 0 0 10px;
+  padding: 10px 0 10px 0;
 }
 
-@media (width <= 768px) {
+@media (width < 768px) {
   .services-swiper {
-    height: 288px;
+    height: 200px;
     max-width: 96%;
     margin-left: auto;
   }
   .services-container__swiper__swiper-wrapper__btn {
     display: none;
+  }
+}
+@media (width >= 768px) {
+  .services-container__swiper__swiper-wrapper__btn {
+    display: "";
   }
 }/*# sourceMappingURL=services.css.map */

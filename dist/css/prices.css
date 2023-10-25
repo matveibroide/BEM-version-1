@@ -33,6 +33,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .prices__prices-wrapper__items {

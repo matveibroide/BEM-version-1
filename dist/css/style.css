@@ -34,6 +34,10 @@ body {
   background-color: #FFFFFF;
 }
 
+nav {
+  margin-bottom: 40px;
+}
+
 .main__search-menu__button {
   width: 200px;
   padding: 8px;
@@ -81,9 +85,29 @@ a {
 }
 
 .main {
-  max-width: 100%;
+  margin-top: 30px;
+  font-size: 14px;
+  box-sizing: border-box;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.main__bigscr-p {
+  display: none;
+}
+
+.main__p {
+  height: 140px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.main__img {
+  max-width: 40%;
 }
 
 .main__button {
@@ -100,6 +124,11 @@ a {
 
 /* mobile styles */
 @media (width <= 320px) {
+  .main {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
   .main__nav__bigscr-p {
     display: none;
   }
@@ -161,6 +190,8 @@ a {
     max-width: 100%;
   }
   .section__header {
+    font-weight: 900;
+    align-items: center;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -216,7 +247,7 @@ a {
     max-width: 100%;
   }
   .main img {
-    max-width: 50%;
+    max-width: 100%;
   }
 }
 .container {
@@ -509,10 +540,20 @@ aside {
 }
 
 @media (width > 768px) {
+  .aside-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .block {
+    height: 50%;
+    width: 100%;
+    background-color: #FFFFFF;
+  }
   aside {
-    height: 100%;
+    height: 50%;
     position: static;
     display: flex;
+    align-items: stretch;
     transform: translate(0%);
   }
   .aside__menu__svg-x {
@@ -554,6 +595,7 @@ aside {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .prices__prices-wrapper__items {
@@ -692,7 +734,7 @@ aside {
 }
 
 .services-swiper {
-  height: 288px;
+  height: 188px;
   max-width: 90%;
 }
 
@@ -708,16 +750,23 @@ aside {
   width: fit-content;
   background-color: transparent;
   border: none;
+  margin: 5px 0 0 10px;
+  padding: 10px 0 10px 0;
 }
 
-@media (width <= 768px) {
+@media (width < 768px) {
   .services-swiper {
-    height: 288px;
+    height: 200px;
     max-width: 96%;
     margin-left: auto;
   }
   .services-container__swiper__swiper-wrapper__btn {
     display: none;
+  }
+}
+@media (width >= 768px) {
+  .services-container__swiper__swiper-wrapper__btn {
+    display: "";
   }
 }
 footer {

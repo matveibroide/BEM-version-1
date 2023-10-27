@@ -1,10 +1,11 @@
 @import './_variables';
 
 footer {
-    padding-top: 5%;
+    display: flex;
+    align-items: center;
+    height: 100px;
     background-color: $background-color-main;
     border-top:1px solid $border-btns-color;
-    height: fit-content;
     max-width: 100%;
     background-color: $background-color-secondary;
 }
@@ -30,9 +31,13 @@ footer {
 }
 
 @media(width<=420px) {
+
+    footer {
+        height: 140px;
+    }
     .footer__items {
-        height: 100px;
+        height: 100%;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 }

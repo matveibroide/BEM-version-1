@@ -99,6 +99,7 @@ body {
     height: 200px;
   }
   .brands-container__button {
+    margin-left: 4%;
     display: block;
   }
   .swiper-pagination {

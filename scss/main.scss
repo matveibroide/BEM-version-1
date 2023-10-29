@@ -28,6 +28,10 @@ body {
     background-color:$background-color-secondary;
 }
 
+.section__header {
+    width: 100%;
+}
+
 .section__header__nav__items {
     transition: 1s;
     margin-top:0;
@@ -36,11 +40,35 @@ body {
     max-width: 100%;
     height: 88px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: $background-color-main;
     
 }
+
+.section__header__nav__items__mobile-icons-container {
+    width: 30%;
+}
+
+.section__header__nav__items__icons-container {
+    width: 35%;
+}
+
+.section__header__nav__items__mobile-icons-container__items {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.section__header__nav__items__icons-container__items {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+
+}
+
 
 nav {
     margin-bottom: 40px;
@@ -140,6 +168,22 @@ a {text-decoration: none;
 
 
 @media (width <= 320px) {
+
+
+    .section__header__nav__items__mobile-icons-container {
+        width: 50%;
+    }
+
+    .section__header__nav__items__icons-container {
+        width: 50%;
+        justify-content: space-between;
+    }
+
+    .main__nav__profile {
+        display: none;
+    }
+    
+    
 
     .section__header__wrapper {
         display: flex;
@@ -247,17 +291,34 @@ a {text-decoration: none;
 
 @media (width > 768px)  {
 
+    .section__search-menu__buttons {
+        flex-wrap: wrap;
+    }
+
+    .main__bigscr-p {
+        display: block;
+    }
+
     .section__header__nav {
         width: 40%;
         margin-bottom: 0px;
     }
 
-    .section__search-menu {
-        width: 100%;
+    .main__search-menu__button {
+        display: flex;
+        align-items: flex-start;
+
+        a {
+            width: fit-content;
+        }
     }
 
-    
 
+
+    .section__search-menu {
+        width: 95%;
+    
+    }
     .section {
         max-width: 100%;
     }
@@ -319,7 +380,7 @@ a {text-decoration: none;
     }
 
     .main__p__wrapper {
-        margin-left: 5%;
+        margin-left: 4%;
         width: 45%;
     }
 
@@ -332,6 +393,7 @@ a {text-decoration: none;
     }
 
     .main  {
+        padding-bottom: 50px;
         display: flex;
         flex-direction: row;
         max-width: 100%;

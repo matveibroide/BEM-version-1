@@ -87,6 +87,11 @@ aside {
   list-style: none;
   justify-content: space-between;
   width: 70%;
+  margin: 0;
+}
+
+.aside__footer__menu {
+  margin: 0;
 }
 
 .aside__footer__menu__items__item {
@@ -98,23 +103,33 @@ aside {
   margin-left: 10%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  height: 30%;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  height: 18%;
   max-width: 70%;
   background-color: transparent;
 }
 
+.aside__footer__language-buttons {
+  width: 100%;
+}
+
 .aside__footer__language-buttons__items {
+  margin-top: 30px;
   display: flex;
   list-style: none;
   justify-content: space-between;
-  width: 50%;
+  width: 70%;
 }
 
 .aside__footer__language-buttons__items li:hover {
   transition: 1s;
   opacity: 0.4;
   cursor: pointer;
+}
+
+.aside__footer__menu {
+  width: 100%;
 }
 
 @media (width > 768px) {

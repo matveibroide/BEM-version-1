@@ -61,17 +61,44 @@ window.addEventListener('resize',(e)=>{
     if (innerWidth<=768 && !menuActive) {
         aside.style.transform = 'translate(-100%)'
     }
-    
+
     })
 
 
 //swiper brands
 
+
+
 let btnActive = false;
 let rows = 2;
-let height = '200px';
-
+let height = innerWidth > 320 ? '200px' : '110px';
+console.log(height)
 const btn = document.querySelector('.brands-container__button');
+
+
+window.addEventListener('resize',(e)=>{
+
+    e.preventDefault()
+    
+    if (innerWidth > 320 && btnActive) {
+        height = '300px'
+        document.querySelector('.brands-swiper').style.height = `${height}`
+       
+    }
+
+    else if (innerWidth > 320 && !btnActive) {
+        height = '200px'
+        document.querySelector('.brands-swiper').style.height = `${height}`
+        
+    }
+
+    else if (innerWidth <= 320) {
+        height = '110px'
+        document.querySelector('.brands-swiper').style.height = `${height}`
+
+    }
+
+    })
 
 btn.addEventListener('click',(e)=>{
 e.preventDefault();
@@ -151,6 +178,12 @@ document.querySelector('.brands-swiper').style.height = `${height}`
 }
 
 )
+
+
+
+
+
+
 
 let swiper = new Swiper('.brands-swiper', {
 

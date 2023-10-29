@@ -2,6 +2,14 @@
   font-family: TT Lakes Regular;
   src: url("../../assets/font-style/TTLakes-Regular.ttf");
 }
+@font-face {
+  font-family: TT Lakes Big;
+  src: url("../../assets/font-style/TTLakes-Bold.ttf");
+}
+.section__header__wrapper__item {
+  font-family: TT Lakes Big;
+}
+
 html {
   height: 100%;
 }
@@ -58,6 +66,7 @@ body {
   display: flex;
   list-style: none;
   justify-content: space-around;
+  align-items: center;
 }
 
 nav {
@@ -82,7 +91,7 @@ nav {
 .section__header__wrapper {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  min-width: 230px;
 }
 
 .section__search-menu {
@@ -125,8 +134,6 @@ a {
 
 .main__p {
   min-height: 160px;
-  height: -moz-fit-content;
-  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -151,6 +158,13 @@ a {
 
 /* mobile styles */
 @media (width <= 320px) {
+  .main__p {
+    min-height: 120px;
+  }
+  .section__search-menu {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
   .section__header__nav__items__mobile-icons-container {
     width: 50%;
   }
@@ -164,7 +178,7 @@ a {
   .section__header__wrapper {
     display: flex;
     justify-content: space-between;
-    max-width: 86%;
+    max-width: 30%;
   }
   .main {
     max-width: 100%;
@@ -234,6 +248,11 @@ a {
 }
 /* big screen styles */
 @media (width > 768px) {
+  .section__header__nav__items__icons-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
   .section__search-menu__buttons {
     flex-wrap: wrap;
   }
@@ -241,8 +260,11 @@ a {
     display: block;
   }
   .section__header__nav {
-    width: 40%;
+    width: 64%;
     margin-bottom: 0px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
   .main__search-menu__button {
     display: flex;
@@ -274,8 +296,11 @@ a {
   .section__header__wrapper img {
     display: block;
   }
+  .section__header__nav__items__mobile-icons-container {
+    display: none;
+  }
   .section__header__nav__items {
-    width: 100%;
+    width: 95%;
     font-size: 16px;
     background-color: transparent;
   }

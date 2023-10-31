@@ -102,11 +102,12 @@ box-shadow: -4px 4px 25px rgba(0, 0, 0, 0.2);
 }
 
 
-@media (width<=320px) {
+
+@media (width<=420px) {
 
     .section__dialog-feedback {
-        width: 320px;
-        min-width: 320px;
+        width: 100%;
+        min-width: 100%;
         display: grid;
         grid-template-columns: 100%;
         grid-auto-rows: 15% 85%;
@@ -115,9 +116,15 @@ box-shadow: -4px 4px 25px rgba(0, 0, 0, 0.2);
         background-color: #fff;
         align-items: stretch;
         position: absolute;
-        left: calc(100% - 320px);
+        left: 0;
         border: none;
         overflow-x: hidden;
+
+
+        .section__dialog__form-wrapper {
+            background-color: transparent;
+            box-shadow: none;
+        }
         
     }
 

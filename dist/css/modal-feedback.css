@@ -91,10 +91,10 @@
   color: #FF3E79;
 }
 
-@media (width <= 320px) {
+@media (width <= 420px) {
   .section__dialog-feedback {
-    width: 320px;
-    min-width: 320px;
+    width: 100%;
+    min-width: 100%;
     display: grid;
     grid-template-columns: 100%;
     grid-auto-rows: 15% 85%;
@@ -103,9 +103,13 @@
     background-color: #fff;
     align-items: stretch;
     position: absolute;
-    left: calc(100% - 320px);
+    left: 0;
     border: none;
     overflow-x: hidden;
+  }
+  .section__dialog-feedback .section__dialog__form-wrapper {
+    background-color: transparent;
+    box-shadow: none;
   }
   .section__dialog-feedback__btn-wrapper {
     height: 100%;

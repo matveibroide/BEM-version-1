@@ -266,14 +266,22 @@ const slidesServices = document.getElementsByClassName("services-container__swip
 
 //modal
 
-const btnPhone = document.querySelector('.footer__phone')
-const btnMessage = document.querySelector('.footer__message')
+const btnPhoneOpenModal = document.querySelector('.footer__phone')
+const btnMessageOpenModal = document.querySelector('.footer__message')
+const btnCloseMessage = document.querySelector('.section__dialog__form-wrapper__form__btn-wrapper__btn__close')
 const modalFeedback = document.querySelector('.section__dialog-feedback')
+modalFeedback.style.display = 'none';
 
-
-btnMessage.addEventListener('click',(e)=>{
-    e.preventDefault()
-
+btnMessageOpenModal.addEventListener('click',(e)=>{
+    
     modalFeedback.showModal()
+modalFeedback.style.display = '';
+
+    
+})
+
+btnCloseMessage.addEventListener('click',(e)=>{
+    modalFeedback.close()
+    modalFeedback.style.display = 'none';
 })
 

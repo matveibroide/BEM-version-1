@@ -11,8 +11,12 @@
     position: absolute;
     left: calc(100% - 400px);
     border: none;
-   
+    overflow-x: hidden;
+}
 
+.section__dialog-feedback::backdrop {
+    background: rgb(255, 255, 255);
+    opacity: 0.7;
 }
 
 
@@ -20,10 +24,16 @@
 .section__dialog__form-wrapper {
 max-width: 93%;
 background-color:$background-color-main;
+
+.section__dialog__form-wrapper__highlight {
+    position: absolute;
+    top: 20px;
+}
 }
 
 .section__dialog__form-wrapper__form {
     margin: 0 auto;
+    margin-top: 7px;
     width: 90%;
     height: 60%;
     background-color:$background-color-main;
@@ -31,6 +41,8 @@ background-color:$background-color-main;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+
+    
     
     label {
         width: 90%;
@@ -62,6 +74,7 @@ background-color:$background-color-main;
 }
 
 .section__dialog__form-wrapper__form__btn-wrapper__btn {
+    background: transparent;
     display: flex;
     border: none;
     width: 41%;
@@ -69,6 +82,13 @@ background-color:$background-color-main;
     padding: 10px;
     background-color:$modalColor ;
     border-radius: 20px;
+}
+
+.section__dialog__form-wrapper__form__btn-wrapper__btn__close {
+    margin-top: 20px;
+    background-color: transparent;
+    border: none;
+
 }
 
 .section__dialog__form__p {
@@ -79,3 +99,42 @@ background-color:$background-color-main;
     color: $modalColor;
 }
 
+
+@media (width<=320px) {
+
+    .section__dialog-feedback {
+        width: 320px;
+        min-width: 320px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-auto-rows: 15% 85%;
+        height: 100vh;
+        z-index: 500;
+        background-color: #fff;
+        align-items: stretch;
+        position: absolute;
+        left: calc(100% - 320px);
+        border: none;
+        overflow-x: hidden;
+    }
+
+    .section__dialog-feedback__btn-wrapper {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0;
+
+      
+        .section__dialog__form-wrapper__form__btn-wrapper__btn__close {
+            margin-left: 10px;
+            margin-top: 0;
+        }
+    }
+
+    .section__dialog__form-wrapper .section__dialog__form-wrapper__highlight {
+        position: absolute;
+        top: 138px;
+    }
+
+}

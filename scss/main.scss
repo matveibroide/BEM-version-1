@@ -69,6 +69,7 @@ body {
     display: flex;
     justify-content: space-around;
     list-style: none;
+    align-items: center;
 }
 
 .section__header__nav__items__icons-container__items {
@@ -175,7 +176,15 @@ a {text-decoration: none;
 }
 
 /* mobile styles */
+@media (width<583px) and (width>320px) {
+    .section__header__nav__items {
+        justify-content: space-evenly;
+    }
+    .section__header__nav__items__icons-container {
+        width: 64%;
+    }
 
+}
 
 @media (width <= 320px) {
 

@@ -20,6 +20,7 @@
 .section__dialog__form-wrapper {
   max-width: 93%;
   background-color: #FFFFFF;
+  box-shadow: -4px 4px 25px rgba(0, 0, 0, 0.2);
 }
 .section__dialog__form-wrapper .section__dialog__form-wrapper__highlight {
   position: absolute;

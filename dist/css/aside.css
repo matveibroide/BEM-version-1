@@ -28,6 +28,7 @@ aside {
   max-width: 100%;
   height: -moz-fit-content;
   height: fit-content;
+  align-items: center;
 }
 
 .aside__menu__svg {
@@ -151,5 +152,28 @@ aside {
   }
   .aside__menu__svg-x {
     display: none;
+  }
+}
+@media (width <= 420px) {
+  aside {
+    justify-content: unset;
+    min-height: 676px;
+  }
+  aside .aside__menu {
+    margin-top: 12px;
+    margin-bottom: 0;
+    height: 10%;
+  }
+  aside .aside__nav {
+    height: 50%;
+    margin-top: 7%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  aside .aside__footer {
+    margin-top: 0;
+    height: 30%;
+    border: none;
+    margin-left: 44px;
   }
 }/*# sourceMappingURL=aside.css.map */

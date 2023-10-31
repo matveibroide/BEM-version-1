@@ -9,7 +9,7 @@ let bars = document.querySelector('.main__nav__bars');
 let closeMenu = document.querySelector('.aside__menu__svg-x')
 let aside = document.querySelector('.aside');
 let innerContent = document.querySelector('.inner-content-container');
-aside.style.height = '100%'
+/* aside.style.height = '100%' */
 let menuActive = false;
 
 
@@ -39,6 +39,7 @@ innerContent.addEventListener('click',(e)=>{
     if (menuActive && e.target.className != 'main__nav__bars'){
         aside.style.transform = 'translate(-100%)'
         innerContent.style.opacity = '1'
+        console.log(e.target)
     }
     
     
@@ -268,16 +269,22 @@ const slidesServices = document.getElementsByClassName("services-container__swip
 
 const btnPhoneOpenModal = document.querySelector('.footer__phone')
 const btnMessageOpenModal = document.querySelector('.footer__message')
+const btnChatOpenModal = document.querySelector('.main__nav__chat')
 const btnCloseMessage = document.querySelector('.section__dialog__form-wrapper__form__btn-wrapper__btn__close')
 const modalFeedback = document.querySelector('.section__dialog-feedback')
-modalFeedback.style.display = 'none';
+modalFeedback.style.display = 'none'
+
+
+btnChatOpenModal.addEventListener('click',(e)=>{
+    e.preventDefault()
+    modalFeedback.showModal()
+    modalFeedback.style.display = '';
+})
 
 btnMessageOpenModal.addEventListener('click',(e)=>{
-    
+    e.preventDefault()
     modalFeedback.showModal()
-modalFeedback.style.display = '';
-
-    
+    modalFeedback.style.display = '';
 })
 
 btnCloseMessage.addEventListener('click',(e)=>{

@@ -265,30 +265,53 @@ const slidesServices = document.getElementsByClassName("services-container__swip
 });
 
 
-//modal
+//modalFeedback
 
-const btnPhoneOpenModal = document.querySelector('.footer__phone')
+
 const btnMessageOpenModal = document.querySelector('.footer__message')
 const btnChatOpenModal = document.querySelector('.main__nav__chat')
 const btnCloseMessage = document.querySelector('.section__dialog__form-wrapper__form__btn-wrapper__btn__close')
 const modalFeedback = document.querySelector('.section__dialog-feedback')
-modalFeedback.style.display = 'none'
+
 
 
 btnChatOpenModal.addEventListener('click',(e)=>{
     e.preventDefault()
     modalFeedback.showModal()
-    modalFeedback.style.display = '';
+    
+    
 })
 
 btnMessageOpenModal.addEventListener('click',(e)=>{
     e.preventDefault()
     modalFeedback.showModal()
-    modalFeedback.style.display = '';
+    
 })
 
 btnCloseMessage.addEventListener('click',(e)=>{
     modalFeedback.close()
-    modalFeedback.style.display = 'none';
+
 })
 
+//orderCallModal
+
+const btnPhoneOpenModal = document.querySelector('.footer__phone')
+const btnPhoneNavOpenModal = document.querySelector('.main__nav__call')
+const orderCallModal = document.querySelector('.order-call-modal')
+const btnCloseOrderCall = document.querySelector('.order-call-modal__btn-close-wrapper__btn-close')
+
+
+btnPhoneOpenModal.addEventListener('click',(e)=>{
+    e.preventDefault()
+    orderCallModal.showModal()
+})
+
+btnPhoneNavOpenModal.addEventListener('click',(e)=>{
+    e.preventDefault()
+    orderCallModal.showModal()
+})
+
+btnCloseOrderCall.addEventListener('click',(e)=>{
+    
+    orderCallModal.close()
+})

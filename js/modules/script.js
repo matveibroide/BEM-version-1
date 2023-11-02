@@ -40,6 +40,10 @@ innerContent.addEventListener('click',(e)=>{
         aside.style.transform = 'translate(-100%)'
         innerContent.style.opacity = '1'
         console.log(e.target)
+        
+        menuActive = !menuActive
+        console.log(menuActive)
+        
     }
     
     
@@ -55,6 +59,7 @@ window.addEventListener('resize',(e)=>{
     }
     
     if (innerWidth<=768 && menuActive) {
+        console.log('worked')
         innerContent.style.opacity = 0.3
         aside.style.transform = 'translate(0%)'
     }

@@ -75,11 +75,14 @@ background-color: #B5B6BC;
 
 @media(width<=320px) {
 
-/* .brands-container .brands-swiper {
-    
-    max-width: 310px;
-    margin-left:10px;
-} */
+    .swiper::after {
+        content: "wefef";
+    }
+
+.brands-swiper {
+    max-width: 96%;
+    margin-left: auto;
+}
 
 .swiper .swiper-wrapper {
     height: 110px;

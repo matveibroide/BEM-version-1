@@ -36,7 +36,7 @@ closeMenu.addEventListener('click',(e)=>{
 
 innerContent.addEventListener('click',(e)=>{
     e.preventDefault()
-    if (menuActive && e.target.className != 'main__nav__bars'){
+    if (menuActive && e.target.className != 'main__nav__bars' && innerWidth<=768){
         aside.style.transform = 'translate(-100%)'
         innerContent.style.opacity = '1'
         console.log(e.target)

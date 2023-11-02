@@ -116,6 +116,9 @@
     min-width: 220px;
     margin-right: auto;
   }
+  .order-call-modal__form {
+    height: 66%;
+  }
   .order-call__btn-wrapper {
     display: flex;
     align-items: center;

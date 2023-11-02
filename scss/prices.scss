@@ -14,6 +14,10 @@
 
 }
 
+.prices__proposal-wrapper__p {
+    width: 42%;
+}
+
 .prices__header-wrapper {
     display: flex;
     align-items: center;
@@ -106,6 +110,15 @@
     width: fit-content;
 }
 
+
+@media (width<=768px) {
+    .prices__proposal-wrapper__p {
+        width: 60%;
+    }
+}
+
+
+
 @media(width<=420px) {
 
 //swiper
@@ -181,6 +194,16 @@
 @media(width>320px) {
     .prices-swiper {
         display: none;
+    }
+
+
+}
+
+
+
+@media(width<=320px) {
+    .prices__proposal-wrapper__p {
+        width: 72%;
     }
 }
 

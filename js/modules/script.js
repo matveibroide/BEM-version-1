@@ -73,7 +73,6 @@ window.addEventListener('resize',(e)=>{
 let btnActive = false;
 let rows = 2;
 let height = innerWidth > 320 ? '200px' : '110px';
-console.log(height)
 const btn = document.querySelector('.brands-container__button');
 
 

@@ -91,7 +91,6 @@
     </dialog>
 
     <div class="container">
-      
         <div class="aside-container">
             <aside class="aside">
                 <nav class="aside__menu">
@@ -184,26 +183,20 @@
                 </footer>
                 </aside>
                 <div class="block">
-                    
                 </div>
         </div>
-
-       
         <div class="inner-content-container">
-            
-          
             <section class="section">
-         
                 <header class="section__header">
                     <nav class="section__header__nav">
                         <ul class="section__header__nav__items">
-                           <li class="section__header__nav__items__mobile-icons-container">
-                            <ul class="section__header__nav__items__mobile-icons-container__items">
-                                <li><img class="main__nav__bars" src="./assets/nav/burger.svg" alt="menu icon"></li>
-                                <li><img class="main__nav__bigscreen__divider" src="./assets/nav/divider.svg" alt=""></li>
-                                <li><img class="main__nav__logo" src="./assets/nav/Group.svg" alt="logo of the company"></li>
-                            </ul>
-                           </li>
+                            <li class="section__header__nav__items__mobile-icons-container">
+                                <ul class="section__header__nav__items__mobile-icons-container__items">
+                                    <li><img class="main__nav__bars" src="./assets/nav/burger.svg" alt="menu icon"></li>
+                                    <li><img class="main__nav__bigscreen__divider" src="./assets/nav/divider.svg" alt=""></li>
+                                    <li><img class="main__nav__logo" src="./assets/nav/Group.svg" alt="logo of the company"></li>
+                                </ul>
+                            </li>
                             <li class="section__header__nav__items__icons-container">
                                 <ul class="section__header__nav__items__icons-container__items">
                                     <li><img class="main__nav__call" src="./assets/nav-big-screen/call.svg" alt="phone call icon"></li>
@@ -238,7 +231,6 @@
                             <li><button class="main__search-menu__button"><a href="">Адреса сервисных центров</a></button></li>
                             <li><button class="main__search-menu__button"><a href="">Специальные</a></button></li>
                             <li><button class="main__search-menu__button"><a href="">Отзывы</a></button></li>
-
                         </ul>
                 </nav>
             
@@ -249,7 +241,6 @@
                         <p class="main__medscr-p">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
                             <span class="main__bigscr-p">Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span>
                         </p>
-                       
                     </div>
                     <button class="main__button"><img src="./assets/article/ReadMore Copy.svg" alt="" srcset=""></button>
                 </div>
@@ -263,7 +254,6 @@
                 </div>
                 <div class="swiper brands-swiper">
                     <div   class="swiper-wrapper">
-                    
                     <div class="swiper-slide"><div class="slide"></div></div>
                     <div class="swiper-slide"><div class="slide"></div></div>
                     <div class="swiper-slide"><div class="slide"></div></div>
@@ -561,7 +551,11 @@ import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs
 
 const slidesServices = document.getElementsByClassName("services-container__swiper__swiper-wrapper__slide");
 
-  
+const showSlidesBtn = document.querySelector('.services-container__swiper__swiper-wrapper__btn')
+let btnActive = false;
+let rows = 2;
+let height = innerWidth > 320 ? '200px' : '110px';
+const btn = document.querySelector('.brands-container__button');
 
 
 let servicesSwiper = new Swiper('.services-swiper', {
@@ -582,7 +576,7 @@ breakpoints: {
     spaceBetween: 40,
     pagination:false,
     grid: {
-    rows:1,
+    rows:2,
     gap:30
     },
     allowSlidePrev:false,

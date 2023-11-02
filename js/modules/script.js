@@ -77,7 +77,7 @@ window.addEventListener('resize',(e)=>{
 
 let btnActive = false;
 let rows = 2;
-let height = innerWidth > 320 ? '200px' : '110px';
+let height = innerWidth > 320 ? '200px' : '125px';
 const btn = document.querySelector('.brands-container__button');
 
 
@@ -98,7 +98,7 @@ window.addEventListener('resize',(e)=>{
     }
 
     else if (innerWidth <= 320) {
-        height = '110px'
+        height = '125px'
         document.querySelector('.brands-swiper').style.height = `${height}`
 
     }

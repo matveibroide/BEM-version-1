@@ -463,7 +463,7 @@ body {
 }
 
 .swiper-pagination span {
-  background-color: #EAEAEA;
+  background-color: #B5B6BC;
 }
 
 @media (width <= 320px) {
@@ -817,7 +817,7 @@ aside {
 @media (width <= 420px) {
   .prices-swiper {
     max-width: 96%;
-    height: 220px;
+    height: 250px;
     margin-left: auto;
   }
   .prices {
@@ -901,7 +901,7 @@ aside {
   flex-direction: column;
   justify-content: space-around;
   max-width: 224px;
-  min-height: 160px;
+  height: 160px;
   border: 1px solid #EAEAEA;
   background-color: #FFFFFF;
   border-radius: 10px;

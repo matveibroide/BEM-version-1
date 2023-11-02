@@ -24,7 +24,7 @@ text-align: left;
     flex-direction: column;
     justify-content: space-around;
     max-width: 224px;
-    min-height: 160px;
+    height: 160px;
     border: 1px solid $border-bottom-color;
     background-color: $background-color-main;
     border-radius: 10px;
@@ -62,6 +62,8 @@ text-align: left;
 }
 
 @media(width>=768px) {
+
+   
 
     .services-container__swiper__swiper-wrapper__btn {
         display: '';

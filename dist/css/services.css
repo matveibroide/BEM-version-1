@@ -21,7 +21,7 @@
   flex-direction: column;
   justify-content: space-around;
   max-width: 224px;
-  min-height: 160px;
+  height: 160px;
   border: 1px solid #EAEAEA;
   background-color: #FFFFFF;
   border-radius: 10px;
